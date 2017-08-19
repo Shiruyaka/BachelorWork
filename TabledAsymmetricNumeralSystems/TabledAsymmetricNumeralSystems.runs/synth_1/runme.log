@@ -1,0 +1,750 @@
+
+*** Running vivado
+    with args -log Compressor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Compressor.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source Compressor.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 276.273 ; gain = 54.125
+Command: synth_design -top Compressor -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11232 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 362.891 ; gain = 75.074
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Compressor' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:47]
+INFO: [Synth 8-3491] module 'Encoder' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:6' bound to instance 'enc' of component 'Encoder' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'Encoder' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:22]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:272]
+WARNING: [Synth 8-6014] Unused sequential element nb_bits_int_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:273]
+INFO: [Synth 8-256] done synthesizing module 'Encoder' (1#1) [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:22]
+INFO: [Synth 8-3491] module 'Driver' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:7' bound to instance 'middle' of component 'Driver' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:215]
+INFO: [Synth 8-638] synthesizing module 'Driver' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element nb_bits_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element computed_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:156]
+INFO: [Synth 8-4471] merging register 'new_data_reg' into 'get_new_state_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:96]
+WARNING: [Synth 8-6014] Unused sequential element new_data_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'Driver' (2#1) [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:46]
+INFO: [Synth 8-3491] module 'Memory_design_wrapper' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design_wrapper.vhd:14' bound to instance 'memory' of component 'Memory_design_wrapper' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_wrapper' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design_wrapper.vhd:75]
+INFO: [Synth 8-3491] module 'Memory_design' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:14' bound to instance 'Memory_design_i' of component 'Memory_design' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design_wrapper.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'Memory_design' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:79]
+INFO: [Synth 8-3491] module 'Memory_design_axi_bram_ctrl_0_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'Memory_design_axi_bram_ctrl_0_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1031]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_axi_bram_ctrl_0_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_0_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Memory_design_axi_bram_ctrl_1_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_1_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_1' of component 'Memory_design_axi_bram_ctrl_1_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1074]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_axi_bram_ctrl_1_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_1_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Memory_design_axi_bram_ctrl_2_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_2_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_2' of component 'Memory_design_axi_bram_ctrl_2_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1117]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_axi_bram_ctrl_2_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_2_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Memory_design_axi_bram_ctrl_3_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_3_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_3' of component 'Memory_design_axi_bram_ctrl_3_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1160]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_axi_bram_ctrl_3_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_3_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Memory_design_axi_bram_ctrl_4_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_4_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_4' of component 'Memory_design_axi_bram_ctrl_4_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1203]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_axi_bram_ctrl_4_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_bram_ctrl_4_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Memory_design_axi_smc_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'Memory_design_axi_smc_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1246]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_axi_smc_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_axi_smc_0_stub.vhdl:216]
+INFO: [Synth 8-3491] module 'Memory_design_blk_mem_gen_1_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_1_0_stub.vhdl:5' bound to instance 'data_in_memory' of component 'Memory_design_blk_mem_gen_1_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1454]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_blk_mem_gen_1_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_1_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'Memory_design_blk_mem_gen_0_3' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_3_stub.vhdl:5' bound to instance 'data_out_memory' of component 'Memory_design_blk_mem_gen_0_3' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1472]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_blk_mem_gen_0_3' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_3_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'Memory_design_blk_mem_gen_0_2' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_2_stub.vhdl:5' bound to instance 'encoding_table_memory' of component 'Memory_design_blk_mem_gen_0_2' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1490]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_blk_mem_gen_0_2' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_2_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'Memory_design_blk_mem_gen_0_1' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_1_stub.vhdl:5' bound to instance 'nb_memory' of component 'Memory_design_blk_mem_gen_0_1' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1508]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_blk_mem_gen_0_1' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_1_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'Memory_design_processing_system7_0_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Memory_design_processing_system7_0_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1526]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_processing_system7_0_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_processing_system7_0_0_stub.vhdl:73]
+INFO: [Synth 8-3491] module 'Memory_design_rst_ps7_0_50M_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'Memory_design_rst_ps7_0_50M_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1591]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_rst_ps7_0_50M_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Memory_design_blk_mem_gen_0_0' declared at 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'start_memory' of component 'Memory_design_blk_mem_gen_0_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:1604]
+INFO: [Synth 8-638] synthesizing module 'Memory_design_blk_mem_gen_0_0' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/realtime/Memory_design_blk_mem_gen_0_0_stub.vhdl:25]
+INFO: [Synth 8-256] done synthesizing module 'Memory_design' (3#1) [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'Memory_design_wrapper' (4#1) [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/bd/Memory_design/hdl/Memory_design_wrapper.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'Compressor' (5#1) [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:47]
+WARNING: [Synth 8-3331] design Driver has unconnected port start_from_ram[31]
+WARNING: [Synth 8-3331] design Driver has unconnected port start_from_ram[30]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 404.973 ; gain = 117.156
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 404.973 ; gain = 117.156
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp29/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/start_memory'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp29/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/start_memory'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp31/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp31/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_0'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp33/Memory_design_axi_smc_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_smc'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp33/Memory_design_axi_smc_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_smc'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp35/Memory_design_rst_ps7_0_50M_0_in_context.xdc] for cell 'memory/Memory_design_i/rst_ps7_0_50M'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp35/Memory_design_rst_ps7_0_50M_0_in_context.xdc] for cell 'memory/Memory_design_i/rst_ps7_0_50M'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp37/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/nb_memory'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp37/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/nb_memory'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp39/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_1'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp39/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_1'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp41/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/encoding_table_memory'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp41/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/encoding_table_memory'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp43/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_2'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp43/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_2'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp45/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/data_in_memory'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp45/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/data_in_memory'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp47/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_3'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp47/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_3'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp49/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/data_out_memory'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp49/Memory_design_blk_mem_gen_0_0_in_context.xdc] for cell 'memory/Memory_design_i/data_out_memory'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp51/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_4'
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/.Xil/Vivado-8200-Tomek-Komputer/dcp51/Memory_design_axi_bram_ctrl_0_0_in_context.xdc] for cell 'memory/Memory_design_i/axi_bram_ctrl_4'
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/constrs_1/new/ZYBO.xdc]
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/constrs_1/new/ZYBO.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/constrs_1/new/ZYBO.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Compressor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Compressor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 717.168 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'memory/Memory_design_i/data_in_memory' at clock pin 'clkb' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'memory/Memory_design_i/data_out_memory' at clock pin 'clkb' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'memory/Memory_design_i/encoding_table_memory' at clock pin 'clkb' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'memory/Memory_design_i/nb_memory' at clock pin 'clkb' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'memory/Memory_design_i/start_memory' at clock pin 'clkb' is different from the actual clock period '8.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/axi_bram_ctrl_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/axi_bram_ctrl_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/axi_bram_ctrl_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/axi_bram_ctrl_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/axi_bram_ctrl_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/axi_smc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/data_in_memory. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/data_out_memory. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/encoding_table_memory. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/nb_memory. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory/Memory_design_i/start_memory. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Encoder'
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:39]
+INFO: [Synth 8-5545] ROM "stream" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "action" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element disjointed_bytes_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:193]
+WARNING: [Synth 8-6014] Unused sequential element data_in_enable_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:192]
+WARNING: [Synth 8-6014] Unused sequential element init_encoder_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:199]
+WARNING: [Synth 8-6014] Unused sequential element nb_address_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:235]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:154]
+WARNING: [Synth 8-3936] Found unconnected internal register 'not_shifted_nb_reg' and it is trimmed from '32' to '16' bits. [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:94]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Driver'
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:64]
+INFO: [Synth 8-5545] ROM "nb_bits_int" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element mem_point_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element NB_BRAM_we_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:274]
+WARNING: [Synth 8-6014] Unused sequential element START_BRAM_we_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:282]
+WARNING: [Synth 8-6014] Unused sequential element ENCODING_TABLE_BRAM_we_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:290]
+WARNING: [Synth 8-327] inferring latch for variable 'action_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:39]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+              get_symbol |                              001 |                              001
+                encoding |                              010 |                              010
+              empty_buff |                              011 |                              011
+            empty_buff_2 |                              100 |                              100
+            out_am_bytes |                              101 |                              101
+               out_state |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'Encoder'
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:39]
+WARNING: [Synth 8-327] inferring latch for variable 'bits_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'encoded_symbol_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 'reset_ram_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:197]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:64]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                            00001 |                              000
+        get_amount_bytes |                            00010 |                              001
+              get_rvalue |                            00100 |                              010
+            get_new_data |                            01000 |                              100
+         compute_nb_bits |                            10000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'Driver'
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:64]
+WARNING: [Synth 8-327] inferring latch for variable 'amount_bytes_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:213]
+WARNING: [Synth 8-327] inferring latch for variable 'start_encoder_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:212]
+WARNING: [Synth 8-327] inferring latch for variable 'init_state_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:153]
+WARNING: [Synth 8-327] inferring latch for variable 'start_nb_enable_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:191]
+WARNING: [Synth 8-327] inferring latch for variable 'start_address_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:234]
+WARNING: [Synth 8-327] inferring latch for variable 'r_value_int_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:224]
+WARNING: [Synth 8-327] inferring latch for variable 'state_enable_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:202]
+WARNING: [Synth 8-327] inferring latch for variable 'nb_bits_int_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:109]
+WARNING: [Synth 8-327] inferring latch for variable 'data_in_address_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:205]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_point_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:217]
+WARNING: [Synth 8-327] inferring latch for variable 'amount_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:215]
+WARNING: [Synth 8-327] inferring latch for variable 'counter_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:228]
+WARNING: [Synth 8-327] inferring latch for variable 'compute_nbBits_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:93]
+WARNING: [Synth 8-327] inferring latch for variable 'DATA_IN_BRAM_we_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:258]
+WARNING: [Synth 8-327] inferring latch for variable 'Init_Middleware_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:219]
+WARNING: [Synth 8-327] inferring latch for variable 'Start_Driver_reg' [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Compressor.vhd:218]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     30 Bit        Muxes := 1     
+	   8 Input     30 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 18    
+	   2 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 4     
+	  13 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Compressor 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+Module Encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 4     
+Module Driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 1     
+	   8 Input     30 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "action" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element disjointed_bytes_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:193]
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Encoder.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element mem_point_reg was removed.  [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:76]
+WARNING: [Synth 8-3331] design Driver has unconnected port start_from_ram[31]
+WARNING: [Synth 8-3331] design Driver has unconnected port start_from_ram[30]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[31]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[30]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[29]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[28]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[27]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[26]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[25]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[24]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[23]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[22]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[21]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[20]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[19]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[18]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[17]
+WARNING: [Synth 8-3331] design Driver has unconnected port nb_from_ram[16]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[31]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[30]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[29]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[28]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[27]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[26]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[25]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[24]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[23]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[22]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[21]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[20]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[19]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[18]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[17]
+WARNING: [Synth 8-3331] design Driver has unconnected port state_from_ram[16]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (enc/\encoded_symbol_reg[0] )
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[20]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[19]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[18]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[24]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[23]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[22]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[21]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[29]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[28]' (LD) to 'middle/r_value_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[31]' (LD) to 'middle/r_value_int_reg[30]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[30]' (LD) to 'middle/r_value_int_reg[27]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[27]' (LD) to 'middle/r_value_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[26]' (LD) to 'middle/r_value_int_reg[25]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[25]' (LD) to 'middle/r_value_int_reg[17]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[10]' (LD) to 'middle/r_value_int_reg[17]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[9]' (LD) to 'middle/r_value_int_reg[17]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[15]' (LD) to 'middle/r_value_int_reg[17]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[14]' (LD) to 'middle/r_value_int_reg[17]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[17]' (LD) to 'middle/r_value_int_reg[16]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[16]' (LD) to 'middle/r_value_int_reg[13]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[13]' (LD) to 'middle/r_value_int_reg[12]'
+INFO: [Synth 8-3886] merging instance 'middle/r_value_int_reg[12]' (LD) to 'middle/r_value_int_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\middle/r_value_int_reg[11] )
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[8]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[9]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[10]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[11]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[12]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[13]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[14]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[15]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[16]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[17]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[18]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[19]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[20]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[21]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[22]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[23]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[24]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[25]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[26]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[27]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[28]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[29]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3886] merging instance 'enc/bits_reg[30]' (LD) to 'enc/bits_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (enc/\bits_reg[31] )
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[19]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[18]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[17]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[23]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[22]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[21]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[20]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[29]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[28]' (LD) to 'middle/nb_bits_int_reg[31]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[31]' (LD) to 'middle/nb_bits_int_reg[30]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[30]' (LD) to 'middle/nb_bits_int_reg[27]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[25]' (LD) to 'middle/nb_bits_int_reg[27]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[24]' (LD) to 'middle/nb_bits_int_reg[27]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[27]' (LD) to 'middle/nb_bits_int_reg[26]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[26]' (LD) to 'middle/nb_bits_int_reg[16]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[9]' (LD) to 'middle/nb_bits_int_reg[16]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[8]' (LD) to 'middle/nb_bits_int_reg[16]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[14]' (LD) to 'middle/nb_bits_int_reg[16]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[13]' (LD) to 'middle/nb_bits_int_reg[16]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[16]' (LD) to 'middle/nb_bits_int_reg[15]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[15]' (LD) to 'middle/nb_bits_int_reg[12]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[12]' (LD) to 'middle/nb_bits_int_reg[11]'
+INFO: [Synth 8-3886] merging instance 'middle/nb_bits_int_reg[11]' (LD) to 'middle/nb_bits_int_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\middle/nb_bits_int_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\middle/mem_point_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\middle/mem_point_reg[1] )
+INFO: [Synth 8-3886] merging instance 'middle/start_address_reg[0]' (LD) to 'middle/start_address_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\middle/start_address_reg[1] )
+INFO: [Synth 8-3886] merging instance 'middle/state_address_reg[0]' (FDRE) to 'middle/state_address_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\middle/state_address_reg[1] )
+INFO: [Synth 8-3886] merging instance 'middle/write_enable_reg[0]' (FD) to 'middle/write_enable_reg[1]'
+INFO: [Synth 8-3886] merging instance 'middle/write_enable_reg[1]' (FD) to 'middle/write_enable_reg[2]'
+INFO: [Synth 8-3886] merging instance 'middle/write_enable_reg[2]' (FD) to 'middle/write_enable_reg[3]'
+INFO: [Synth 8-3886] merging instance 'middle/write_enable_reg[3]' (FD) to 'middle/out_enable_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\middle/data_out_address_reg[31] )
+INFO: [Synth 8-3886] merging instance 'DATA_IN_BRAM_we_reg[0]' (LD) to 'DATA_IN_BRAM_we_reg[3]'
+INFO: [Synth 8-3886] merging instance 'DATA_IN_BRAM_we_reg[1]' (LD) to 'DATA_IN_BRAM_we_reg[3]'
+INFO: [Synth 8-3886] merging instance 'DATA_IN_BRAM_we_reg[2]' (LD) to 'DATA_IN_BRAM_we_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DATA_IN_BRAM_we_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\middle/reset_ram_reg )
+INFO: [Synth 8-3886] merging instance 'middle/data_out_address_reg[0]' (FDE) to 'middle/data_out_address_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\middle/data_out_address_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (bits_reg[31]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (encoded_symbol_reg[0]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[8]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[9]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[10]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[11]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[12]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[13]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[14]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[15]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[16]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[17]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[18]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[19]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[20]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[21]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[22]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[23]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[24]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[25]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[26]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[27]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[28]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[29]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[30]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (disjointed_bytes_reg[31]) is unused and will be removed from module Encoder.
+WARNING: [Synth 8-3332] Sequential element (middle/reset_ram_reg) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/start_address_reg[1]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/r_value_int_reg[11]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/not_shifted_nb_reg[1]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/not_shifted_nb_reg[0]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/nb_bits_int_reg[10]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/state_address_reg[1]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/mem_point_reg[0]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/mem_point_reg[1]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/mem_point_reg[31]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/data_out_address_reg[31]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/data_out_address_reg[1]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (DATA_IN_BRAM_we_reg[3]) is unused and will be removed from module Compressor.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'memory/Memory_design_i/axi_bram_ctrl_0/bram_clk_a' to pin 'memory/Memory_design_i/axi_bram_ctrl_0/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'memory/Memory_design_i/axi_bram_ctrl_1/bram_clk_a' to pin 'memory/Memory_design_i/axi_bram_ctrl_1/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'memory/Memory_design_i/axi_bram_ctrl_2/bram_clk_a' to pin 'memory/Memory_design_i/axi_bram_ctrl_2/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'memory/Memory_design_i/axi_bram_ctrl_3/bram_clk_a' to pin 'memory/Memory_design_i/axi_bram_ctrl_3/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'memory/Memory_design_i/axi_bram_ctrl_4/bram_clk_a' to pin 'memory/Memory_design_i/axi_bram_ctrl_4/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:06 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:06 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[5]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[6]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[7]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[8]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[9]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[10]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[11]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[12]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[13]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[14]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[15]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[16]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[17]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[18]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[0]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[1]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[2]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[3]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (enc/buffor_reg[4]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/data_in_address_reg[0]) is unused and will be removed from module Compressor.
+WARNING: [Synth 8-3332] Sequential element (middle/mem_point_reg[0]) is unused and will be removed from module Compressor.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:234]
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:224]
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:191]
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.srcs/sources_1/new/Driver.vhd:213]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------------+----------+
+|      |BlackBox name                        |Instances |
++------+-------------------------------------+----------+
+|1     |Memory_design_axi_bram_ctrl_0_0      |         1|
+|2     |Memory_design_axi_bram_ctrl_1_0      |         1|
+|3     |Memory_design_axi_bram_ctrl_2_0      |         1|
+|4     |Memory_design_axi_bram_ctrl_3_0      |         1|
+|5     |Memory_design_axi_bram_ctrl_4_0      |         1|
+|6     |Memory_design_axi_smc_0              |         1|
+|7     |Memory_design_blk_mem_gen_1_0        |         1|
+|8     |Memory_design_blk_mem_gen_0_3        |         1|
+|9     |Memory_design_blk_mem_gen_0_2        |         1|
+|10    |Memory_design_blk_mem_gen_0_1        |         1|
+|11    |Memory_design_processing_system7_0_0 |         1|
+|12    |Memory_design_rst_ps7_0_50M_0        |         1|
+|13    |Memory_design_blk_mem_gen_0_0        |         1|
++------+-------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------------+------+
+|      |Cell                                      |Count |
++------+------------------------------------------+------+
+|1     |Memory_design_axi_bram_ctrl_0_0_bbox      |     1|
+|2     |Memory_design_axi_bram_ctrl_1_0_bbox      |     1|
+|3     |Memory_design_axi_bram_ctrl_2_0_bbox      |     1|
+|4     |Memory_design_axi_bram_ctrl_3_0_bbox      |     1|
+|5     |Memory_design_axi_bram_ctrl_4_0_bbox      |     1|
+|6     |Memory_design_axi_smc_0_bbox              |     1|
+|7     |Memory_design_blk_mem_gen_0_0_bbox        |     1|
+|8     |Memory_design_blk_mem_gen_0_1_bbox        |     1|
+|9     |Memory_design_blk_mem_gen_0_2_bbox        |     1|
+|10    |Memory_design_blk_mem_gen_0_3_bbox        |     1|
+|11    |Memory_design_blk_mem_gen_1_0_bbox        |     1|
+|12    |Memory_design_processing_system7_0_0_bbox |     1|
+|13    |Memory_design_rst_ps7_0_50M_0_bbox        |     1|
+|14    |BUFG                                      |     2|
+|15    |CARRY4                                    |    98|
+|16    |LUT1                                      |   235|
+|17    |LUT2                                      |   205|
+|18    |LUT3                                      |    46|
+|19    |LUT4                                      |    32|
+|20    |LUT5                                      |    55|
+|21    |LUT6                                      |   213|
+|22    |FDRE                                      |   232|
+|23    |FDSE                                      |     1|
+|24    |LD                                        |   230|
+|25    |IBUF                                      |     3|
++------+------------------------------------------+------+
+
+Report Instance Areas: 
++------+--------------------+----------------------+------+
+|      |Instance            |Module                |Cells |
++------+--------------------+----------------------+------+
+|1     |top                 |                      |  2991|
+|2     |  enc               |Encoder               |   643|
+|3     |  memory            |Memory_design_wrapper |  1690|
+|4     |    Memory_design_i |Memory_design         |  1639|
+|5     |  middle            |Driver                |   644|
++------+--------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 717.168 ; gain = 429.352
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 139 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:50 . Memory (MB): peak = 717.168 ; gain = 117.156
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 717.168 ; gain = 429.352
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 331 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 230 instances were transformed.
+  LD => LDCE: 229 instances
+  LD => LDCE (inverted pins: G): 1 instances
+
+164 Infos, 151 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:17 . Memory (MB): peak = 717.168 ; gain = 440.895
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/synth_1/Compressor.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 717.168 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 18 22:52:57 2017...

@@ -1,0 +1,949 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Fri Aug 18 23:29:02 2017
+| Host         : Tomek-Komputer running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Compressor_methodology_drc_routed.rpt -rpx Compressor_methodology_drc_routed.rpx
+| Design       : Compressor
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_Compressor
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 182
++-----------+----------+------------------------------------------------+------------+
+| Rule      | Severity | Description                                    | Violations |
++-----------+----------+------------------------------------------------+------------+
+| TIMING-6  | Warning  | No common primary clock between related clocks | 2          |
+| TIMING-7  | Warning  | No common node between related clocks          | 2          |
+| TIMING-16 | Warning  | Large setup violation                          | 4          |
+| TIMING-18 | Warning  | Missing input or output delay                  | 2          |
+| TIMING-20 | Warning  | Non-clocked latch                              | 172        |
++-----------+----------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks IO_L11P_T1_SRCC_35 and clk_fpga_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks IO_L11P_T1_SRCC_35] -to [get_clocks clk_fpga_0]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and IO_L11P_T1_SRCC_35 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks IO_L11P_T1_SRCC_35]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks IO_L11P_T1_SRCC_35 and clk_fpga_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks IO_L11P_T1_SRCC_35] -to [get_clocks clk_fpga_0]
+Related violations: <none>
+
+TIMING-7#2 Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and IO_L11P_T1_SRCC_35 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks IO_L11P_T1_SRCC_35]
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.023 ns between middle/data_out_to_save_reg[10]/C (clocked by IO_L11P_T1_SRCC_35) and memory/Memory_design_i/data_out_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/DIBDI[10] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.026 ns between middle/data_out_to_save_reg[15]/C (clocked by IO_L11P_T1_SRCC_35) and memory/Memory_design_i/data_out_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/DIBDI[15] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.052 ns between memory/Memory_design_i/encoding_table_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKBWRCLK (clocked by clk_fpga_0) and middle/state_address_reg[12]/D (clocked by IO_L11P_T1_SRCC_35). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.259 ns between memory/Memory_design_i/encoding_table_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKBWRCLK (clocked by clk_fpga_0) and middle/state_address_reg[11]/D (clocked by IO_L11P_T1_SRCC_35). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on init relative to clock(s) IO_L11P_T1_SRCC_35 
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on start relative to clock(s) IO_L11P_T1_SRCC_35 
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch Init_Middleware_reg cannot be properly analyzed as its control pin Init_Middleware_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch Start_Driver_reg cannot be properly analyzed as its control pin Start_Driver_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch enc/action_reg[0] cannot be properly analyzed as its control pin enc/action_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch enc/action_reg[1] cannot be properly analyzed as its control pin enc/action_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch enc/action_reg[2] cannot be properly analyzed as its control pin enc/action_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch enc/bits_reg[0] cannot be properly analyzed as its control pin enc/bits_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch enc/bits_reg[1] cannot be properly analyzed as its control pin enc/bits_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch enc/bits_reg[2] cannot be properly analyzed as its control pin enc/bits_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch enc/bits_reg[3] cannot be properly analyzed as its control pin enc/bits_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch enc/bits_reg[4] cannot be properly analyzed as its control pin enc/bits_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch enc/bits_reg[5] cannot be properly analyzed as its control pin enc/bits_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch enc/bits_reg[6] cannot be properly analyzed as its control pin enc/bits_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch enc/bits_reg[7] cannot be properly analyzed as its control pin enc/bits_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch enc/encoded_symbol_reg[1] cannot be properly analyzed as its control pin enc/encoded_symbol_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch enc/encoded_symbol_reg[2] cannot be properly analyzed as its control pin enc/encoded_symbol_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch enc/encoded_symbol_reg[3] cannot be properly analyzed as its control pin enc/encoded_symbol_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch enc/encoded_symbol_reg[4] cannot be properly analyzed as its control pin enc/encoded_symbol_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch enc/encoded_symbol_reg[5] cannot be properly analyzed as its control pin enc/encoded_symbol_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch enc/encoded_symbol_reg[6] cannot be properly analyzed as its control pin enc/encoded_symbol_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch enc/encoded_symbol_reg[7] cannot be properly analyzed as its control pin enc/encoded_symbol_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[0] cannot be properly analyzed as its control pin middle/amount_bytes_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[10] cannot be properly analyzed as its control pin middle/amount_bytes_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[11] cannot be properly analyzed as its control pin middle/amount_bytes_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[12] cannot be properly analyzed as its control pin middle/amount_bytes_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[13] cannot be properly analyzed as its control pin middle/amount_bytes_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[14] cannot be properly analyzed as its control pin middle/amount_bytes_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[15] cannot be properly analyzed as its control pin middle/amount_bytes_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[16] cannot be properly analyzed as its control pin middle/amount_bytes_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[17] cannot be properly analyzed as its control pin middle/amount_bytes_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[18] cannot be properly analyzed as its control pin middle/amount_bytes_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[19] cannot be properly analyzed as its control pin middle/amount_bytes_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[1] cannot be properly analyzed as its control pin middle/amount_bytes_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[20] cannot be properly analyzed as its control pin middle/amount_bytes_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[21] cannot be properly analyzed as its control pin middle/amount_bytes_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[22] cannot be properly analyzed as its control pin middle/amount_bytes_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[23] cannot be properly analyzed as its control pin middle/amount_bytes_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[24] cannot be properly analyzed as its control pin middle/amount_bytes_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[25] cannot be properly analyzed as its control pin middle/amount_bytes_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[26] cannot be properly analyzed as its control pin middle/amount_bytes_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[27] cannot be properly analyzed as its control pin middle/amount_bytes_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[28] cannot be properly analyzed as its control pin middle/amount_bytes_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[29] cannot be properly analyzed as its control pin middle/amount_bytes_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[2] cannot be properly analyzed as its control pin middle/amount_bytes_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[30] cannot be properly analyzed as its control pin middle/amount_bytes_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[31] cannot be properly analyzed as its control pin middle/amount_bytes_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[3] cannot be properly analyzed as its control pin middle/amount_bytes_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[4] cannot be properly analyzed as its control pin middle/amount_bytes_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[5] cannot be properly analyzed as its control pin middle/amount_bytes_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[6] cannot be properly analyzed as its control pin middle/amount_bytes_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[7] cannot be properly analyzed as its control pin middle/amount_bytes_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[8] cannot be properly analyzed as its control pin middle/amount_bytes_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch middle/amount_bytes_reg[9] cannot be properly analyzed as its control pin middle/amount_bytes_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch middle/amount_reg[0] cannot be properly analyzed as its control pin middle/amount_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch middle/amount_reg[10] cannot be properly analyzed as its control pin middle/amount_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch middle/amount_reg[11] cannot be properly analyzed as its control pin middle/amount_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch middle/amount_reg[12] cannot be properly analyzed as its control pin middle/amount_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch middle/amount_reg[13] cannot be properly analyzed as its control pin middle/amount_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch middle/amount_reg[14] cannot be properly analyzed as its control pin middle/amount_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch middle/amount_reg[15] cannot be properly analyzed as its control pin middle/amount_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch middle/amount_reg[16] cannot be properly analyzed as its control pin middle/amount_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch middle/amount_reg[17] cannot be properly analyzed as its control pin middle/amount_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch middle/amount_reg[18] cannot be properly analyzed as its control pin middle/amount_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch middle/amount_reg[19] cannot be properly analyzed as its control pin middle/amount_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch middle/amount_reg[1] cannot be properly analyzed as its control pin middle/amount_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch middle/amount_reg[20] cannot be properly analyzed as its control pin middle/amount_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch middle/amount_reg[21] cannot be properly analyzed as its control pin middle/amount_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch middle/amount_reg[22] cannot be properly analyzed as its control pin middle/amount_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch middle/amount_reg[23] cannot be properly analyzed as its control pin middle/amount_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch middle/amount_reg[24] cannot be properly analyzed as its control pin middle/amount_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch middle/amount_reg[25] cannot be properly analyzed as its control pin middle/amount_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch middle/amount_reg[26] cannot be properly analyzed as its control pin middle/amount_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch middle/amount_reg[27] cannot be properly analyzed as its control pin middle/amount_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch middle/amount_reg[28] cannot be properly analyzed as its control pin middle/amount_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch middle/amount_reg[29] cannot be properly analyzed as its control pin middle/amount_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch middle/amount_reg[2] cannot be properly analyzed as its control pin middle/amount_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch middle/amount_reg[30] cannot be properly analyzed as its control pin middle/amount_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch middle/amount_reg[31] cannot be properly analyzed as its control pin middle/amount_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch middle/amount_reg[3] cannot be properly analyzed as its control pin middle/amount_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch middle/amount_reg[4] cannot be properly analyzed as its control pin middle/amount_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch middle/amount_reg[5] cannot be properly analyzed as its control pin middle/amount_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch middle/amount_reg[6] cannot be properly analyzed as its control pin middle/amount_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch middle/amount_reg[7] cannot be properly analyzed as its control pin middle/amount_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch middle/amount_reg[8] cannot be properly analyzed as its control pin middle/amount_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch middle/amount_reg[9] cannot be properly analyzed as its control pin middle/amount_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#85 Warning
+Non-clocked latch  
+The latch middle/compute_nbBits_reg cannot be properly analyzed as its control pin middle/compute_nbBits_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#86 Warning
+Non-clocked latch  
+The latch middle/counter_reg[0] cannot be properly analyzed as its control pin middle/counter_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#87 Warning
+Non-clocked latch  
+The latch middle/counter_reg[10] cannot be properly analyzed as its control pin middle/counter_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#88 Warning
+Non-clocked latch  
+The latch middle/counter_reg[11] cannot be properly analyzed as its control pin middle/counter_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#89 Warning
+Non-clocked latch  
+The latch middle/counter_reg[12] cannot be properly analyzed as its control pin middle/counter_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#90 Warning
+Non-clocked latch  
+The latch middle/counter_reg[13] cannot be properly analyzed as its control pin middle/counter_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#91 Warning
+Non-clocked latch  
+The latch middle/counter_reg[14] cannot be properly analyzed as its control pin middle/counter_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#92 Warning
+Non-clocked latch  
+The latch middle/counter_reg[15] cannot be properly analyzed as its control pin middle/counter_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#93 Warning
+Non-clocked latch  
+The latch middle/counter_reg[16] cannot be properly analyzed as its control pin middle/counter_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#94 Warning
+Non-clocked latch  
+The latch middle/counter_reg[17] cannot be properly analyzed as its control pin middle/counter_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#95 Warning
+Non-clocked latch  
+The latch middle/counter_reg[18] cannot be properly analyzed as its control pin middle/counter_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#96 Warning
+Non-clocked latch  
+The latch middle/counter_reg[19] cannot be properly analyzed as its control pin middle/counter_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#97 Warning
+Non-clocked latch  
+The latch middle/counter_reg[1] cannot be properly analyzed as its control pin middle/counter_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#98 Warning
+Non-clocked latch  
+The latch middle/counter_reg[20] cannot be properly analyzed as its control pin middle/counter_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#99 Warning
+Non-clocked latch  
+The latch middle/counter_reg[21] cannot be properly analyzed as its control pin middle/counter_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#100 Warning
+Non-clocked latch  
+The latch middle/counter_reg[22] cannot be properly analyzed as its control pin middle/counter_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#101 Warning
+Non-clocked latch  
+The latch middle/counter_reg[23] cannot be properly analyzed as its control pin middle/counter_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#102 Warning
+Non-clocked latch  
+The latch middle/counter_reg[24] cannot be properly analyzed as its control pin middle/counter_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#103 Warning
+Non-clocked latch  
+The latch middle/counter_reg[25] cannot be properly analyzed as its control pin middle/counter_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#104 Warning
+Non-clocked latch  
+The latch middle/counter_reg[26] cannot be properly analyzed as its control pin middle/counter_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#105 Warning
+Non-clocked latch  
+The latch middle/counter_reg[27] cannot be properly analyzed as its control pin middle/counter_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#106 Warning
+Non-clocked latch  
+The latch middle/counter_reg[28] cannot be properly analyzed as its control pin middle/counter_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#107 Warning
+Non-clocked latch  
+The latch middle/counter_reg[29] cannot be properly analyzed as its control pin middle/counter_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#108 Warning
+Non-clocked latch  
+The latch middle/counter_reg[2] cannot be properly analyzed as its control pin middle/counter_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#109 Warning
+Non-clocked latch  
+The latch middle/counter_reg[30] cannot be properly analyzed as its control pin middle/counter_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#110 Warning
+Non-clocked latch  
+The latch middle/counter_reg[31] cannot be properly analyzed as its control pin middle/counter_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#111 Warning
+Non-clocked latch  
+The latch middle/counter_reg[3] cannot be properly analyzed as its control pin middle/counter_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#112 Warning
+Non-clocked latch  
+The latch middle/counter_reg[4] cannot be properly analyzed as its control pin middle/counter_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#113 Warning
+Non-clocked latch  
+The latch middle/counter_reg[5] cannot be properly analyzed as its control pin middle/counter_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#114 Warning
+Non-clocked latch  
+The latch middle/counter_reg[6] cannot be properly analyzed as its control pin middle/counter_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#115 Warning
+Non-clocked latch  
+The latch middle/counter_reg[7] cannot be properly analyzed as its control pin middle/counter_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#116 Warning
+Non-clocked latch  
+The latch middle/counter_reg[8] cannot be properly analyzed as its control pin middle/counter_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#117 Warning
+Non-clocked latch  
+The latch middle/counter_reg[9] cannot be properly analyzed as its control pin middle/counter_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#118 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[10] cannot be properly analyzed as its control pin middle/data_in_address_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#119 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[11] cannot be properly analyzed as its control pin middle/data_in_address_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#120 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[12] cannot be properly analyzed as its control pin middle/data_in_address_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#121 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[2] cannot be properly analyzed as its control pin middle/data_in_address_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#122 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[3] cannot be properly analyzed as its control pin middle/data_in_address_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#123 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[4] cannot be properly analyzed as its control pin middle/data_in_address_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#124 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[5] cannot be properly analyzed as its control pin middle/data_in_address_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#125 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[6] cannot be properly analyzed as its control pin middle/data_in_address_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#126 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[7] cannot be properly analyzed as its control pin middle/data_in_address_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#127 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[8] cannot be properly analyzed as its control pin middle/data_in_address_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#128 Warning
+Non-clocked latch  
+The latch middle/data_in_address_reg[9] cannot be properly analyzed as its control pin middle/data_in_address_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#129 Warning
+Non-clocked latch  
+The latch middle/init_state_reg cannot be properly analyzed as its control pin middle/init_state_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#130 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[10] cannot be properly analyzed as its control pin middle/mem_point_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#131 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[11] cannot be properly analyzed as its control pin middle/mem_point_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#132 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[12] cannot be properly analyzed as its control pin middle/mem_point_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#133 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[1] cannot be properly analyzed as its control pin middle/mem_point_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#134 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[2] cannot be properly analyzed as its control pin middle/mem_point_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#135 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[3] cannot be properly analyzed as its control pin middle/mem_point_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#136 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[4] cannot be properly analyzed as its control pin middle/mem_point_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#137 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[5] cannot be properly analyzed as its control pin middle/mem_point_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#138 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[6] cannot be properly analyzed as its control pin middle/mem_point_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#139 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[7] cannot be properly analyzed as its control pin middle/mem_point_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#140 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[8] cannot be properly analyzed as its control pin middle/mem_point_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#141 Warning
+Non-clocked latch  
+The latch middle/mem_point_reg[9] cannot be properly analyzed as its control pin middle/mem_point_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#142 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[0] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#143 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[1] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#144 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[2] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#145 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[3] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#146 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[4] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#147 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[5] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#148 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[6] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#149 Warning
+Non-clocked latch  
+The latch middle/nb_bits_int_reg[7] cannot be properly analyzed as its control pin middle/nb_bits_int_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#150 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[0] cannot be properly analyzed as its control pin middle/r_value_int_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#151 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[1] cannot be properly analyzed as its control pin middle/r_value_int_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#152 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[2] cannot be properly analyzed as its control pin middle/r_value_int_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#153 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[3] cannot be properly analyzed as its control pin middle/r_value_int_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#154 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[4] cannot be properly analyzed as its control pin middle/r_value_int_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#155 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[5] cannot be properly analyzed as its control pin middle/r_value_int_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#156 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[6] cannot be properly analyzed as its control pin middle/r_value_int_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#157 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[7] cannot be properly analyzed as its control pin middle/r_value_int_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#158 Warning
+Non-clocked latch  
+The latch middle/r_value_int_reg[8] cannot be properly analyzed as its control pin middle/r_value_int_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#159 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[10] cannot be properly analyzed as its control pin middle/start_address_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#160 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[11] cannot be properly analyzed as its control pin middle/start_address_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#161 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[12] cannot be properly analyzed as its control pin middle/start_address_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#162 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[2] cannot be properly analyzed as its control pin middle/start_address_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#163 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[3] cannot be properly analyzed as its control pin middle/start_address_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#164 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[4] cannot be properly analyzed as its control pin middle/start_address_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#165 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[5] cannot be properly analyzed as its control pin middle/start_address_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#166 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[6] cannot be properly analyzed as its control pin middle/start_address_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#167 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[7] cannot be properly analyzed as its control pin middle/start_address_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#168 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[8] cannot be properly analyzed as its control pin middle/start_address_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#169 Warning
+Non-clocked latch  
+The latch middle/start_address_reg[9] cannot be properly analyzed as its control pin middle/start_address_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#170 Warning
+Non-clocked latch  
+The latch middle/start_encoder_reg cannot be properly analyzed as its control pin middle/start_encoder_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#171 Warning
+Non-clocked latch  
+The latch middle/start_nb_enable_reg cannot be properly analyzed as its control pin middle/start_nb_enable_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#172 Warning
+Non-clocked latch  
+The latch middle/state_enable_reg cannot be properly analyzed as its control pin middle/state_enable_reg/G is not reached by a timing clock
+Related violations: <none>
+
+

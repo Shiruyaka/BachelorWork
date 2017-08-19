@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Aug 14 15:13:17 2017
+# Process ID: 3408
+# Current directory: C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/Memory_design_blk_mem_gen_0_2_synth_1
+# Command line: vivado.exe -log Memory_design_blk_mem_gen_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Memory_design_blk_mem_gen_0_2.tcl
+# Log file: C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/Memory_design_blk_mem_gen_0_2_synth_1/Memory_design_blk_mem_gen_0_2.vds
+# Journal file: C:/Users/Tomek/Desktop/TabledAsymetricNumeralSystems-master/TabledAsymmetricNumeralSystems/TabledAsymmetricNumeralSystems.runs/Memory_design_blk_mem_gen_0_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Memory_design_blk_mem_gen_0_2.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP Memory_design_blk_mem_gen_0_2, cache-ID = 2c6817da2483a39c.

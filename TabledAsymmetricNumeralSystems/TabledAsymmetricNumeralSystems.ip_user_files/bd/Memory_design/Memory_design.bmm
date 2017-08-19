@@ -1,0 +1,35 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE start_memory_8K_1_MEM_DEVICE [0x00002000] 32;
+DEFINE_MEMORY_TYPE nb_memory_8K_1_MEM_DEVICE [0x00002000] 32;
+DEFINE_MEMORY_TYPE encoding_table_memory_8K_1_MEM_DEVICE [0x00002000] 32;
+DEFINE_MEMORY_TYPE data_in_memory_8K_1_MEM_DEVICE [0x00002000] 32;
+DEFINE_MEMORY_TYPE data_out_memory_8K_1_MEM_DEVICE [0x00002000] 32;
+
+ADDRESS_MAP processing_system7_0 ARM 100 processing_system7_0
+   ADDRESS_SPACE start_memory_8K_1_ADDR_SPACE start_memory_8K_1_MEM_DEVICE  [0x40000000:0x40001FFF] axi_bram_ctrl_0
+     BUS_BLOCK
+      start_memory_8K_1_BUS_BLK [31:0] INPUT = "Memory_design_blk_mem_gen_0_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE nb_memory_8K_1_ADDR_SPACE nb_memory_8K_1_MEM_DEVICE  [0x42000000:0x42001FFF] axi_bram_ctrl_1
+     BUS_BLOCK
+      nb_memory_8K_1_BUS_BLK [31:0] INPUT = "Memory_design_blk_mem_gen_0_1.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE encoding_table_memory_8K_1_ADDR_SPACE encoding_table_memory_8K_1_MEM_DEVICE  [0x44000000:0x44001FFF] axi_bram_ctrl_2
+     BUS_BLOCK
+      encoding_table_memory_8K_1_BUS_BLK [31:0] INPUT = "Memory_design_blk_mem_gen_0_2.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE data_in_memory_8K_1_ADDR_SPACE data_in_memory_8K_1_MEM_DEVICE  [0x46000000:0x46001FFF] axi_bram_ctrl_3
+     BUS_BLOCK
+      data_in_memory_8K_1_BUS_BLK [31:0] INPUT = "Memory_design_blk_mem_gen_1_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE data_out_memory_8K_1_ADDR_SPACE data_out_memory_8K_1_MEM_DEVICE  [0x48000000:0x48001FFF] axi_bram_ctrl_4
+     BUS_BLOCK
+      data_out_memory_8K_1_BUS_BLK [31:0] INPUT = "Memory_design_blk_mem_gen_0_3.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;
